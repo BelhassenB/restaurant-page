@@ -1,9 +1,11 @@
 export const divContent = document.querySelector('#content')
-export const homeContent = document.createElement('div')
-homeContent.id = 'home-content'
 
-export function HomeContent() {    
+export const homeBtn = document.querySelector('.home-btn')
 
+export function homePage() {
+    const homeContent = document.createElement('div')
+    homeContent.id = 'home-content'
+    
     const h2 = document.createElement("h2")
     h2.textContent = "Welcome to my restaurant"
 
@@ -18,17 +20,6 @@ export function HomeContent() {
     homeContent.append(h2)
     homeContent.append(h3)
     homeContent.append(p)    
-    divContent.append(homeContent)
+    divContent.replaceChildren(homeContent)  
     
-}
-
-export function displayHomeContent() {
-    document.addEventListener("DOMContentLoaded", HomeContent)
-}
-
-
-
-export function dispalyHomeContentOnClick() {
-    const homeBtn = document.querySelector('#home-btn')
-    homeBtn.addEventListener("click", HomeContent)
 }
