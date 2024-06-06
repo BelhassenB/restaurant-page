@@ -5,15 +5,18 @@
 }
 :root {
     --main-text-color: #fff;
+    --content-bg-color: rgb(122 122 122 / .3)
 }
 
 body {
     font-family: system-ui, sans-serif, -apple-system, BlinkMacSystemFont, 'Helvetica Neue';
     background: no-repeat url('./img/my-restau-image.jpg');
-    background-size: cover;
     overflow: auto;
+    background-size: cover;
+    background-attachment: fixed;   
     
 }
+
 .header-bar {
     margin: 30px auto;
     width: 50vw;
@@ -45,9 +48,8 @@ button:active {
     width: 100%;
     img {
         width: 300px;
-        height: auto;
+        height: 300px;
         margin-top: 1rem;
-        /* border: 2px solid var(--main-text-color); */
         box-shadow: 2px 2px #000;
      }
     
@@ -59,7 +61,7 @@ button:active {
     color: var(--main-text-color);
     text-align: center;
     font-size: 2rem;
-    background-color: rgb(122 122 122 / .3);
+    background-color: var(--content-bg-color);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 #menu-content {
@@ -68,10 +70,20 @@ button:active {
     text-align: center;
     h4 {
         
-        background-color: rgb(122 122 122 / .7);
+        background-color: var(--content-bg-color);
         color: var(--main-text-color);
         width: max-content;
         margin: 1rem auto;
         padding: 10px 30px;
     }   
+}
+#about-content {
+    width: max-content;
+    color: var(--main-text-color);
+    text-align: center;
+    margin: auto;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--content-bg-color);
 }
