@@ -2,9 +2,11 @@ import  {divContent, homeContent, displayHomeContent}  from './home';
 import greekSaladImg from './img/greek-salad.jpeg'
 import saladMechouiaImg from './img/salad-mechouia.jpg'
 import tunisianCouscousImg from './img/tunisian-couscous.jpg'
+export const menuBtn = document.querySelector('.menu-btn') 
 
 
-function createMenu() {    
+
+export function menuPage() {    
 
     const saladMechouia = new Image()
     saladMechouia.src = saladMechouiaImg
@@ -16,8 +18,7 @@ function createMenu() {
     greekSalad.src = greekSaladImg
     
     const menuContent = document.createElement('div')
-    menuContent.id = 'menu-content'  
-    
+    menuContent.id = 'menu-content'      
     
     const mechouiaTitle = document.createElement('h4')
     mechouiaTitle.textContent = "Tunisian Salad Mechouia / Price: $7.00"
@@ -34,12 +35,13 @@ function createMenu() {
     menuContent.append(greekSaladTitle)
     menuContent.append(greekSalad)
 
-    divContent.replaceChild(menuContent, homeContent)    
+    divContent.replaceChildren()
+    divContent.append(menuContent)
+
 }
 
-export function displayMenu() {
-    const menuBtn = document.querySelector('.menu-btn') 
+// export function displayMenu() {
 
-    menuBtn.addEventListener("click", createMenu)
+//     menuBtn.addEventListener("click", createMenu)
 
-} 
+// } 
